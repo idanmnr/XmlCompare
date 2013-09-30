@@ -1,0 +1,42 @@
+<ignoreElements>
+	<ignoreElement>
+		<elementXpath>/env:Envelope/env:Body/fiel:FieldManagementReadAll_Output/data:ListOfFieldSet/data:FieldSet[data:ObjectName='CRMODLS_PlanOpportunities']/data:ListOfFields/data:Field[data:Name='Updated By First Name']</elementXpath>
+		<conditions></conditions>
+		<namespaces>
+			<namespace>
+				<prefix>env</prefix>
+				<value>http://schemas.xmlsoap.org/soap/envelope/</value>
+			</namespace>
+			<namespace>
+				<prefix>fiel</prefix>
+				<value>urn:crmondemand/ws/odesabs/fieldmanagement/</value>
+			</namespace>
+			<namespace>
+				<prefix>data</prefix>
+				<value>urn:/crmondemand/xml/fieldmanagement/data</value>
+			</namespace>
+		</namespaces>
+	</ignoreElement>	
+	<ignoreElement>
+		<elementXpath>/env:Envelope/env:Body/fiel:FieldManagementReadAll_Output/data:ListOfFieldSet/data:FieldSet[data:ObjectName='CustomObject9']</elementXpath>
+		<conditions></conditions>
+		<namespaces>
+			<namespace>
+				<prefix>env</prefix>
+				<value>http://schemas.xmlsoap.org/soap/envelope/</value>
+			</namespace>
+			<namespace>
+				<prefix>fiel</prefix>
+				<value>urn:crmondemand/ws/odesabs/fieldmanagement/</value>
+			</namespace>
+			<namespace>
+				<prefix>data</prefix>
+				<value>urn:/crmondemand/xml/fieldmanagement/data</value>
+			</namespace>
+		</namespaces>
+	</ignoreElement>	
+</ignoreElements>
+
+        
+
+
