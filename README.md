@@ -33,7 +33,7 @@ ea_services.xml
 In this file you specify which web services to contact and get the data from. 
 You need to specify the service name, username, pwd, and full path of the output file. 
 
-!important - the full paths you specify in this file should then be copied to the ea_xml_compare.bat file.
+**important** - the full paths you specify in this file should then be copied to the ea_xml_compare.bat file.
 
 This file is read by the XmlDiffXmlFileFinder.exe 
 
