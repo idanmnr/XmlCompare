@@ -1,0 +1,18 @@
+<animals>
+  <animal>
+    <kind>dog</kind>
+    <name>Snoopy</name>
+  </animal>
+  <!-- [ignored] <animal><kind>cat</kind><name>Chester</name></animal>-->
+  <animal>
+    <kind>mouse</kind>
+    <name>Miki</name>
+  </animal>
+  <animal>
+    <kind>hippo</kind>
+    <name>Slim</name>
+  </animal>
+  <not_an_animal>
+    <name>Joe Smith</name>
+  </not_an_animal>
+</animals>

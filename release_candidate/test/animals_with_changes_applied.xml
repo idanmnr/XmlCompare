@@ -1,0 +1,22 @@
+<animals>
+  <animal>
+    <kind>dog</kind>
+    <name>Snoopy</name>
+  </animal>
+  <animal>
+    <kind>cat</kind>
+    <name>Chester</name>
+  </animal>
+  <animal>
+    <kind>lion</kind>
+    <name>Simba</name>
+  </animal>
+  <animal>
+    <kind>elephant</kind>
+    <name>Dumbo</name>
+  </animal>
+  <animal>
+    <kind>mouse</kind>
+    <name>Brain</name>
+  </animal>
+</animals>

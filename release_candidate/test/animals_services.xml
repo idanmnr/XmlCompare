@@ -1,0 +1,12 @@
+<services>
+	<service>
+		<name>FieldManagementService</name>
+		<username>ENERGYAUSTRALIA/NMAIN</username>
+		<password>Noofta001</password>
+		<responseFullPathFileName>C:\Dev\MSXmlDiffPatch\release candidate\test\service_call_test.xml</responseFullPathFileName>
+	</service>	
+</services>
+
+        
+
+
