@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="http://schemas.microsoft.com/wse/2005/06/policy"
+           elementFormDefault="qualified"
+		   xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://schemas.microsoft.com/wse/2005/06/policy">
+
+	<!-- simple types -->
+
+	<xs:simpleType name="RestrictedBoolean">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="StoreLocationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LocalMachine" />
+			<xs:enumeration value="CurrentUser" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="StoreNameType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="My"/>
+			<xs:enumeration value="Root"/>
+			<xs:enumeration value="TrustedPeople"/>
+			<xs:enumeration value="TrustedPublisher"/>
+			<xs:enumeration value="CertificateAuthority"/>
+			<xs:enumeration value="AuthRoot"/>
+			<xs:enumeration value="AddressBook"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="SignatureOptionsType">
+		<xs:list>
+			<xs:simpleType>
+				<xs:restriction base ="xs:string">
+					<xs:enumeration value="IncludeNone"/>
+					<xs:enumeration value="IncludeAction"/>
+					<xs:enumeration value="IncludeMessageId"/>
+					<xs:enumeration value="IncludeFaultTo"/>
+					<xs:enumeration value="IncludeFrom"/>
+					<xs:enumeration value="IncludeReferenceProperties"/>
+					<xs:enumeration value="IncludeRelatesTo"/>
+					<xs:enumeration value="IncludeReplyTo"/>
+					<xs:enumeration value="IncludeTo"/>
+					<xs:enumeration value="IncludeReferenceParameters"/>
+					<xs:enumeration value="IncludeAddressing"/>
+					<xs:enumeration value="IncludeTimestamp"/>
+					<xs:enumeration value="IncludeSoapBody"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:list>
+	</xs:simpleType>
+
+	<xs:simpleType name="X509FindType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FindBySubjectName"/>
+			<xs:enumeration value="FindByThumbprint"/>
+			<xs:enumeration value="FindBySubjectKeyIdentifier"/>
+			<xs:enumeration value="FindBySubjectDistinguishedName"/>
+			<xs:enumeration value="FindByTemplateName"/>
+			<xs:enumeration value="FindBySerialNumber"/>
+			<xs:enumeration value="FindByKeyUsage"/>
+			<xs:enumeration value="FindByIssuerName"/>
+			<xs:enumeration value="FindByIssuerDistinguishedName"/>
+			<xs:enumeration value="FindByExtension"/>
+			<xs:enumeration value="FindByApplicationPolicy"/>
+			<xs:enumeration value="FindByCertificatePolicy"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ImpersonationLevelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Identification"/>
+			<xs:enumeration value="Impersonation"/>
+			<xs:enumeration value="Delegation"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="MessageProtectionOrderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SignBeforeEncrypt"/>
+			<xs:enumeration value="SignBeforeEncryptAndEncryptSignature"/>
+			<xs:enumeration value="EncryptBeforeSign"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- complex types -->
+
+	<xs:complexType name="RequireSoapHeaderType">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="namespace" type="xs:string" use="required"/>
+		<xs:attribute name="actor" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="RequireActionHeaderType">
+	</xs:complexType>
+	
+	<xs:complexType name="MessageProtectionRequirementsType">
+		<xs:sequence>
+			<xs:element name="signedHeader" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:string" use="required"/>
+					<xs:attribute name="ns" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="signatureOptions" type="tns:SignatureOptionsType" use="optional"/>
+		<xs:attribute name="encryptBody" type="tns:RestrictedBoolean" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="OperationProtectionRequirementsType">
+		<xs:sequence>
+			<xs:element name="request" type="tns:MessageProtectionRequirementsType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="response" type="tns:MessageProtectionRequirementsType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="fault" type="tns:MessageProtectionRequirementsType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="requestAction" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="X509TokenProviderType">
+		<xs:attribute name="storeLocation" type="tns:StoreLocationType" use="optional"/>
+		<xs:attribute name="storeName" type="tns:StoreNameType" use="optional"/>
+		<xs:attribute name="findValue" type="xs:string" use="optional"/>
+		<xs:attribute name="findType" type="tns:X509FindType" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="KerberosTokenProviderType">
+		<xs:attribute name="targetPrincipal" type="xs:string" use="optional"/>
+		<xs:attribute name="impersonationLevel" type="tns:ImpersonationLevelType" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="UsernameProviderType">
+		<xs:attribute name="username" type="xs:string" use="optional"/>
+		<xs:attribute name="password" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:attributeGroup name="SecurityPolicyAssertionAttributes">
+		<xs:attribute name="establishSecurityContext" type="tns:RestrictedBoolean" use="optional"/>
+		<xs:attribute name="renewExpiredSecurityContext" type="tns:RestrictedBoolean" use="optional"/>
+		<xs:attribute name="requireSignatureConfirmation" type="tns:RestrictedBoolean" use="optional"/>
+		<xs:attribute name="requireDerivedKeys" type="tns:RestrictedBoolean" use="optional"/>
+		<xs:attribute name="clientActor" type="xs:string" use="optional"/>
+                <xs:attribute name="serviceActor" type="xs:string" use="optional"/>
+		<xs:attribute name="messageProtectionOrder" type="tns:MessageProtectionOrderType" use="optional"/>
+		<xs:attribute name="ttlInSeconds" type="xs:integer" use="optional"/>
+	</xs:attributeGroup>
+
+	<xs:group name="EndpointProtectionRequriements">
+		<xs:sequence>
+			<xs:element name="protection" type="tns:OperationProtectionRequirementsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="UsernameForCertificateSecurityType">
+		<xs:sequence>
+			<xs:element name="clientToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="username" type="tns:UsernameProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="serviceToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x509" type="tns:X509TokenProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="tns:EndpointProtectionRequriements"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="tns:SecurityPolicyAssertionAttributes"/>
+	</xs:complexType>
+
+	<xs:complexType name="AnonymousForCertificateSecurityType">
+		<xs:sequence>
+			<xs:element name="serviceToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x509" type="tns:X509TokenProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="tns:EndpointProtectionRequriements"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="tns:SecurityPolicyAssertionAttributes"/>
+	</xs:complexType>
+
+	<xs:complexType name="KerberosSecurityType">
+		<xs:sequence>
+			<xs:element name="token" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="kerberos" type="tns:KerberosTokenProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="tns:EndpointProtectionRequriements"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="tns:SecurityPolicyAssertionAttributes"/>
+	</xs:complexType>
+
+	<xs:complexType name="MutualCertificateSecurityType">
+		<xs:sequence>
+			<xs:element name="clientToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x509" type="tns:X509TokenProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="serviceToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x509" type="tns:X509TokenProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:group ref="tns:EndpointProtectionRequriements"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="tns:SecurityPolicyAssertionAttributes"/>
+	</xs:complexType>
+
+	<xs:complexType name="UsernameOverTransportSecurityType">
+		<xs:sequence>
+			<xs:element name="clientToken" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="username" type="tns:UsernameProviderType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+                <xs:attribute name="actor" type="xs:string" use="optional"/>
+
+	</xs:complexType>
+
+	<xs:complexType name="AccessCheckRuleType">
+		<xs:attribute name="user" type="xs:string" use="optional"/>
+		<xs:attribute name="role" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="AuthorizationType">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:choice>
+				<xs:element name="allow" type="tns:AccessCheckRuleType"/>
+				<xs:element name="deny" type="tns:AccessCheckRuleType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="roleProviderName" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="PolicyType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="usernameForCertificateSecurity" type="tns:UsernameForCertificateSecurityType"/>
+			<xs:element name="usernameOverTransportSecurity" type="tns:UsernameOverTransportSecurityType"/>
+			<xs:element name="mutualCertificate10Security" type="tns:MutualCertificateSecurityType"/>
+			<xs:element name="mutualCertificate11Security" type="tns:MutualCertificateSecurityType"/>
+			<xs:element name="anonymousForCertificateSecurity" type="tns:AnonymousForCertificateSecurityType"/>
+			<xs:element name="kerberosSecurity" type="tns:KerberosSecurityType"/>
+			<xs:element name="authorization" type="tns:AuthorizationType"/>
+			<xs:element name="requireSoapHeader" type="tns:RequireSoapHeaderType"/>
+			<xs:element name="requireActionHeader" type="tns:RequireActionHeaderType"/>
+			<xs:any namespace="##other" processContents="lax"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="PoliciesType">
+		<xs:sequence>
+			<xs:element name="extensions" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="extension" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="name" type="xs:Name" use="required"/>
+								<xs:attribute name="type" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="policy" type="tns:PolicyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- root element -->
+
+	<xs:element name="policies" type="tns:PoliciesType"/>
+
+</xs:schema>

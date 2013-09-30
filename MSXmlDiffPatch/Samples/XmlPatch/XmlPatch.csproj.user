@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>"C:\Dev\MSXmlDiffPatch\release candidate\animals.xml" "C:\Dev\MSXmlDiffPatch\release candidate\animal_diffgram_2.xml" "C:\Dev\MSXmlDiffPatch\release candidate\animals_patched_2.xml"</StartArguments>
+  </PropertyGroup>
+</Project>

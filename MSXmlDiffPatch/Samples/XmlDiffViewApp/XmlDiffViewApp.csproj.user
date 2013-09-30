@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>/o /c /p /w "C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm" "C:\Dev\MSXmlDiffPatch\files\ea_diffgram.xml" "C:\Dev\MSXmlDiffPatch\files\ea_ignore.xml"</StartArguments>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+</Project>

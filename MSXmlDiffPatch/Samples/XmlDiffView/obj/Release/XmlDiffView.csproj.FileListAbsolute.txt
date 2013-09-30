@@ -1,0 +1,4 @@
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\bin\Release\XmlDiffPatch.View.dll
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\obj\Release\XmlDiffView.csprojResolveAssemblyReference.cache
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\obj\Release\XmlDiffPatch.View.dll
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\bin\Release\XmlDiffPatch.dll

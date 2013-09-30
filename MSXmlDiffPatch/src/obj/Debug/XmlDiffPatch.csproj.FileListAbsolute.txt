@@ -1,0 +1,4 @@
+C:\Dev\MSXmlDiffPatch\src\bin\Debug\XmlDiffPatch.dll
+C:\Dev\MSXmlDiffPatch\src\bin\Debug\XmlDiffPatch.pdb
+C:\Dev\MSXmlDiffPatch\src\obj\Debug\XmlDiffPatch.dll
+C:\Dev\MSXmlDiffPatch\src\obj\Debug\XmlDiffPatch.pdb

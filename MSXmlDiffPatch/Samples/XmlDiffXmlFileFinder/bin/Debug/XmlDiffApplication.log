@@ -1,0 +1,5 @@
+2013-09-27 14:44:27,250 [8] INFO  XmlDiffXmlFileFinder       Service[2] loaded: [ServiceName:FieldManagementService][Username:ENERGYAUSTRALIA/NMAIN][Password:Noofta001][OutputFileName:C:\Dev\MSXmlDiffPatch\files\FieldServiceWsdl\ResponseStagingFieldManagementService.xml]
+2013-09-27 14:44:27,336 [8] INFO  XmlDiffXmlFileFinder       Loading xml data from FieldManagementService ...
+2013-09-27 14:44:28,590 [8] INFO  XmlDiffXmlFileFinder       Making service call to FieldManagementService.FieldManagementReadAll
+2013-09-27 14:44:39,721 [8] DEBUG XmlDiffXmlFileFinder       Service call to FieldManagementService.FieldManagementReadAll returned successfully
+2013-09-27 14:44:39,775 [8] INFO  XmlDiffXmlFileFinder       FieldManagementService.FieldManagementReadAll output saved to file: C:\Dev\MSXmlDiffPatch\files\FieldServiceWsdl\ResponseStagingFieldManagementService.xml

@@ -1,0 +1,8 @@
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Debug\XmlDiff.exe
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Debug\XmlDiff.pdb
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\obj\Debug\XmlDiff.csprojResolveAssemblyReference.cache
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\obj\Debug\XmlDiff.exe
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\obj\Debug\XmlDiff.pdb
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Debug\XmlDiffPatch.dll
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Debug\XmlDiffPatch.pdb
+C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Debug\XmlDiff.exe.config
