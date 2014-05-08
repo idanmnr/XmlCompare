@@ -1,0 +1,9 @@
+xmlDiff project:
+
+/o /c /p /w "C:\Dev\MSXmlDiffPatch\files\animals.xml" "C:\Dev\MSXmlDiffPatch\files\animals_change.xml" "C:\Dev\MSXmlDiffPatch\files\ignore.xml" "C:\Dev\MSXmlDiffPatch\files\animals_diff_result.xml"
+
+
+/o /c /p /w "C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\ea_ignore.xml" "C:\Dev\MSXmlDiffPatch\files\ea_diff_result.xml"
+
+/o /c /p /w "C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm" "C:\Dev\MSXmlDiffPatch\files\ea_ignore.xml" 
+

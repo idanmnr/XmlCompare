@@ -6,3 +6,11 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\XmlDiffPatch.View.dll
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\log4net.xml
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffViewApp\obj\Release\XmlDiffViewApp.csprojResolveAssemblyReference.cache
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffViewApp\obj\Release\XmlDiffView.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\XmlDiffView.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\XmlDiffView.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\log4net.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\XmlDiffPatch.View.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\bin\Release\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\obj\Release\XmlDiffViewApp.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffViewApp\obj\Release\XmlDiffView.exe

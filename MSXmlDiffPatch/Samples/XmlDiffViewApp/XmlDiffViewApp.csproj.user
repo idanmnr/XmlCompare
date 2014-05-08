@@ -11,7 +11,7 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>/o /c /p /w "C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml" "C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm" "C:\Dev\MSXmlDiffPatch\files\ea_diffgram.xml" "C:\Dev\MSXmlDiffPatch\files\ea_ignore.xml"</StartArguments>
+    <StartArguments>/o /c /p /w "C:\Dev\git\XmlCompare\release_candidate\test\animals.xml" "C:\Dev\git\XmlCompare\release_candidate\test\animals_change.xml" "C:\Dev\git\XmlCompare\release_candidate\test\animals_changes_view.htm" "C:\Dev\git\XmlCompare\release_candidate\test\animals_diffgram.xml" "C:\Dev\git\XmlCompare\release_candidate\test\animals_ignore.xml"</StartArguments>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
 </Project>

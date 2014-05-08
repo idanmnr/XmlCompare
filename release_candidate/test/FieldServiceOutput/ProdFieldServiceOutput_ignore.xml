@@ -1,0 +1,5 @@
+<ignoreElements>
+	<ignoreElement>
+		<elementXpath>/env:Envelope/env:Header</elementXpath>
+	</ignoreElement>
+</ignoreElements>

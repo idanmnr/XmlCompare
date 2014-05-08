@@ -1,0 +1,5 @@
+<ignoreElements>
+	<ignoreElement>
+		<elementXpath>/animals/animal[kind='cat']</elementXpath>
+	</ignoreElement>
+</ignoreElements>

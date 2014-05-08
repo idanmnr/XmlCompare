@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions targetNamespace="urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;fieldmanagement&#x2f;" xmlns="http&#x3a;&#x2f;&#x2f;schemas.xmlsoap.org&#x2f;wsdl&#x2f;" xmlns:tns="urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;fieldmanagement&#x2f;" xmlns:soapenc="http&#x3a;&#x2f;&#x2f;schemas.xmlsoap.org&#x2f;soap&#x2f;encoding&#x2f;" xmlns:xsd="http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema" xmlns:soap="http&#x3a;&#x2f;&#x2f;schemas.xmlsoap.org&#x2f;wsdl&#x2f;soap&#x2f;" xmlns:apData="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;data" xmlns:apQuery="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;query">
+    <types>
+        <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;fieldmanagement&#x2f;" xmlns:xsd="http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema">
+            <xsd:import namespace="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;query"></xsd:import>
+            <xsd:import namespace="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;data"></xsd:import>
+            <xsd:element name="FieldManagementReadAll_Input" type="tns&#x3a;FieldManagementReadAll_Input"></xsd:element>
+                <xsd:complexType name="FieldManagementReadAll_Input">
+                  <xsd:sequence>
+		       <xsd:element name="IncludeAll" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+		  </xsd:sequence>
+                </xsd:complexType>
+           
+            <xsd:element name="FieldManagementReadAll_Output" type="tns&#x3a;FieldManagementReadAll_Output"></xsd:element>
+                <xsd:complexType name="FieldManagementReadAll_Output">
+                    <xsd:sequence>
+                        <xsd:element ref="apData&#x3a;ListOfFieldSet"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+           
+            <xsd:element name="FieldManagementRead_Input" type="tns&#x3a;FieldManagementRead_Input"></xsd:element>
+                <xsd:complexType name="FieldManagementRead_Input">
+                    <xsd:sequence>
+                        <xsd:element ref="apQuery&#x3a;FieldSet"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            
+            <xsd:element name="FieldManagementRead_Output" type="tns&#x3a;FieldManagementRead_Output"></xsd:element>
+                <xsd:complexType name="FieldManagementRead_Output">
+                    <xsd:sequence>
+                        <xsd:element ref="apData&#x3a;ListOfFieldSet"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+          
+            <xsd:element name="FieldManagementUpsert_Input" type="tns&#x3a;FieldManagementUpsert_Input"></xsd:element>
+                <xsd:complexType name="FieldManagementUpsert_Input">
+                    <xsd:sequence>
+                        <xsd:element ref="apData&#x3a;FieldSet"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+          
+            <xsd:element name="FieldManagementUpsert_Output" type="tns&#x3a;FieldManagementUpsert_Output"></xsd:element>
+                <xsd:complexType name="FieldManagementUpsert_Output"> 
+                    <xsd:sequence>
+                        <xsd:element name="Status" type="xsd&#x3a;string"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+          
+            <xsd:element name="FieldManagementCreate_Input" type="tns&#x3a;FieldManagementCreate_Input"></xsd:element>
+                <xsd:complexType name="FieldManagementCreate_Input">
+                    <xsd:sequence>
+                        <xsd:element ref="apData&#x3a;CustomField"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+         
+            <xsd:element name="FieldManagementCreate_Output" type="tns&#x3a;FieldManagementCreate_Output"></xsd:element>
+                <xsd:complexType name="FieldManagementCreate_Output">
+                    <xsd:sequence>
+                        <xsd:element name="Status" type="xsd&#x3a;string"></xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+          
+        </xsd:schema>
+        <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;query" xmlns:apQuery="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;query" xmlns:xsd="http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema">              
+            <xsd:element name="FieldSet" type="apQuery&#x3a;FieldSetQuery"></xsd:element>
+            <xsd:complexType name="FieldSetQuery">
+                <xsd:all>
+                    <xsd:element name="ObjectName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element> 
+                    <xsd:element name="IncludeAll" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ListOfFields" type="apQuery&#x3a;ListOfFieldsQuery" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfFieldsQuery">
+                <xsd:sequence>
+                    <xsd:element name="Field" type="apQuery&#x3a;FieldQuery" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="FieldQuery">
+                <xsd:all>
+                    <xsd:element name="Name" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="DisplayName" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="FieldType" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="IntegrationTag" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="GenericIntegrationTag" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="Required" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ReadOnly" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="DefaultValue" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="FieldValidation" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="PostDefault" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ListOfFieldTranslations" type="apQuery&#x3a;ListOfFieldTranslationsQuery" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfFieldTranslationsQuery">
+                <xsd:sequence>
+                    <xsd:element name="FieldTranslation" type="apQuery&#x3a;FieldTranslationQuery" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="FieldTranslationQuery">
+                <xsd:all>
+                    <xsd:element name="LanguageCode" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="DisplayName" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="apQuery&#x3a;Empty" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="Empty"></xsd:complexType>
+        </xsd:schema>
+        <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;data" xmlns:apData="urn&#x3a;&#x2f;crmondemand&#x2f;xml&#x2f;fieldmanagement&#x2f;data" xmlns:xsd="http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema">
+            <xsd:element name="ListOfFieldSet" type="apData&#x3a;ListOfFieldSetData"></xsd:element>
+            <xsd:complexType name="ListOfFieldSetData">
+                <xsd:sequence>
+                    <xsd:element ref="apData&#x3a;FieldSet" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="FieldSet" type="apData&#x3a;FieldSetData"></xsd:element>
+            <xsd:complexType name="FieldSetData">
+                <xsd:all>
+                    <xsd:element name="ObjectName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="ListOfFields" type="apData&#x3a;ListOfFieldsData" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfFieldsData">
+                <xsd:sequence>
+                    <xsd:element name="Field" type="apData&#x3a;FieldData" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="FieldData">
+                <xsd:all>
+                    <xsd:element name="Name" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="DisplayName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="FieldType" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="IntegrationTag" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="GenericIntegrationTag" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="Required" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ReadOnly" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="DefaultValue" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="FieldValidation" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="PostDefault" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ListOfFieldTranslations" type="apData&#x3a;ListOfFieldTranslationsData" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfFieldTranslationsData">
+                <xsd:sequence>
+                    <xsd:element name="FieldTranslation" type="apData&#x3a;FieldTranslationData" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="FieldTranslationData">
+                <xsd:all>
+                    <xsd:element name="LanguageCode" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="DisplayName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:element name="CustomField" type="apData&#x3a;CustomFieldData"></xsd:element>
+            <xsd:complexType name="CustomFieldData">
+                <xsd:all>
+                    <xsd:element name="ObjectName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="DisplayName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="CustomFieldType" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="IntegrationTag" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="GenericIntegrationTag" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="Required" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ReadOnly" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="DefaultValue" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="CustomFieldValidation" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="PostDefault" type="xsd&#x3a;boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                    <xsd:element name="ListOfCustomFieldTranslations" type="apData&#x3a;ListOfCustomFieldTranslationsData" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+            <xsd:complexType name="ListOfCustomFieldTranslationsData">
+                <xsd:sequence>
+                    <xsd:element name="CustomFieldTranslation" type="apData&#x3a;CustomFieldTranslationData" maxOccurs="unbounded" minOccurs="1"></xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="CustomFieldTranslationData">
+                <xsd:all>
+                    <xsd:element name="LanguageCode" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="DisplayName" type="xsd&#x3a;string" maxOccurs="1" minOccurs="1"></xsd:element>
+                    <xsd:element name="ValidationErrorMsg" type="xsd&#x3a;string" maxOccurs="1" minOccurs="0"></xsd:element>
+                </xsd:all>
+            </xsd:complexType>
+        </xsd:schema>
+    </types>
+    <message name="FieldManagementReadAll_Input">
+        <part name="FieldManagementReadAll_Input" element="tns&#x3a;FieldManagementReadAll_Input"></part>
+    </message>
+    <message name="FieldManagementReadAll_Output">
+        <part name="FieldManagementReadAll_Output" element="tns&#x3a;FieldManagementReadAll_Output"></part>
+    </message>
+    <message name="FieldManagementRead_Input">
+        <part name="FieldManagementRead_Input" element="tns&#x3a;FieldManagementRead_Input"></part>
+    </message>
+    <message name="FieldManagementRead_Output">
+        <part name="FieldManagementRead_Output" element="tns&#x3a;FieldManagementRead_Output"></part>
+    </message>
+    <message name="FieldManagementUpsert_Input">
+        <part name="FieldManagementUpsert_Input" element="tns&#x3a;FieldManagementUpsert_Input"></part>
+    </message>
+    <message name="FieldManagementUpsert_Output">
+        <part name="FieldManagementUpsert_Output" element="tns&#x3a;FieldManagementUpsert_Output"></part>
+    </message>
+    <message name="FieldManagementCreate_Input">
+        <part name="FieldManagementCreate_Input" element="tns&#x3a;FieldManagementCreate_Input"></part>
+    </message>
+    <message name="FieldManagementCreate_Output">
+        <part name="FieldManagementCreate_Output" element="tns&#x3a;FieldManagementCreate_Output"></part>
+    </message>
+    <portType name="FieldManagementService">
+        <operation name="FieldManagementReadAll">
+            <input message="tns&#x3a;FieldManagementReadAll_Input"></input>
+            <output message="tns&#x3a;FieldManagementReadAll_Output"></output>
+        </operation>
+        <operation name="FieldManagementRead">
+            <input message="tns&#x3a;FieldManagementRead_Input"></input>
+            <output message="tns&#x3a;FieldManagementRead_Output"></output>
+        </operation>
+        <operation name="FieldManagementUpsert">
+            <input message="tns&#x3a;FieldManagementUpsert_Input"></input>
+            <output message="tns&#x3a;FieldManagementUpsert_Output"></output>
+        </operation>
+        <operation name="FieldManagementCreate">
+            <input message="tns&#x3a;FieldManagementCreate_Input"></input>
+            <output message="tns&#x3a;FieldManagementCreate_Output"></output>
+        </operation>
+    </portType>
+    <binding name="FieldManagementService" type="tns&#x3a;FieldManagementService">
+        <soap:binding style="document" transport="http&#x3a;&#x2f;&#x2f;schemas.xmlsoap.org&#x2f;soap&#x2f;http"></soap:binding>
+        <operation name="FieldManagementReadAll">
+            <soap:operation soapAction="document&#x2f;urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;FieldManagement&#x2f;&#x3a;FieldManagementReadAll"></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+        </operation>
+        <operation name="FieldManagementRead">
+            <soap:operation soapAction="document&#x2f;urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;FieldManagement&#x2f;&#x3a;FieldManagementRead"></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+        </operation>
+        <operation name="FieldManagementUpsert">
+            <soap:operation soapAction="document&#x2f;urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;FieldManagement&#x2f;&#x3a;FieldManagementUpsert"></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+        </operation>
+        <operation name="FieldManagementCreate">
+            <soap:operation soapAction="document&#x2f;urn&#x3a;crmondemand&#x2f;ws&#x2f;odesabs&#x2f;FieldManagement&#x2f;&#x3a;FieldManagementCreate"></soap:operation>
+            <input>
+                <soap:body use="literal"></soap:body>
+            </input>
+            <output>
+                <soap:body use="literal"></soap:body>
+            </output>
+        </operation>
+    </binding>
+    <service name="FieldManagementService">
+        <port name="FieldManagementService" binding="tns&#x3a;FieldManagementService">
+            <soap:address location="https&#x3a;&#x2f;&#x2f;secure-sysomxyaa.crmondemand.com.au&#x2f;Services&#x2f;cte&#x2f;FieldManagementService"></soap:address>
+        </port>
+    </service>
+</definitions>

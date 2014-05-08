@@ -5,3 +5,10 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\XmlDiffPatch.dll
 C:\Dev\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\log4net.xml
 C:\Dev\MSXmlDiffPatch\Samples\XmlPatch\obj\Release\XmlPatch.csprojResolveAssemblyReference.cache
 C:\Dev\MSXmlDiffPatch\Samples\XmlPatch\obj\Release\XmlPatch.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\XmlPatch.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\obj\Release\XmlPatch.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\XmlPatch.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\log4net.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Release\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\obj\Release\XmlPatch.csprojResolveAssemblyReference.cache

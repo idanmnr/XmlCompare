@@ -1,3 +1,5 @@
 C:\Dev\MSXmlDiffPatch\src\bin\Release\XmlDiffPatch.dll
 C:\Dev\MSXmlDiffPatch\src\obj\Release\XmlDiffPatch.dll
 C:\Dev\MSXmlDiffPatch\src\obj\Release\XmlDiffPatch.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\src\bin\Release\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\src\obj\Release\XmlDiffPatch.dll

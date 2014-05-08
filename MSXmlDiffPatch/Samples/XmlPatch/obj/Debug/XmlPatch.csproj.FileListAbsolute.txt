@@ -1,0 +1,10 @@
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\XmlPatch.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\XmlPatch.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\XmlPatch.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\log4net.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\XmlDiffPatch.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\bin\Debug\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\obj\Debug\XmlPatch.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\obj\Debug\XmlPatch.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlPatch\obj\Debug\XmlPatch.pdb

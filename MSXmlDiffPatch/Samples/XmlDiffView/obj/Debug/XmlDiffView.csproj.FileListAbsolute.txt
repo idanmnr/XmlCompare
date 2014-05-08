@@ -3,3 +3,10 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\bin\Debug\XmlDiffPatch.View.pdb
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffPatch.View.dll
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffPatch.View.pdb
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffView.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\bin\Debug\XmlDiffPatch.View.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\bin\Debug\XmlDiffPatch.View.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\bin\Debug\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\bin\Debug\XmlDiffPatch.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffView.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffPatch.View.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffView\obj\Debug\XmlDiffPatch.View.pdb

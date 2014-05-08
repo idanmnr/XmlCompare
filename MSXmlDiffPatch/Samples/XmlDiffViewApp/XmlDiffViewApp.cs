@@ -85,25 +85,43 @@ class XmlDiffViewApp {
                 curArgIndex++;
             }
 
-            if ( args.Length - curArgIndex < 3 ) {
+            if ( args.Length - curArgIndex <= 3 ) {
                 WriteUsage();
                 return;
             }
 
-            bool includeIngnore = (args.Length - curArgIndex > 3);
+            bool includeIngnore = (args.Length - curArgIndex > 4);
 
             string sourceXmlFile = args[curArgIndex];
             string changedXmlFile = args[curArgIndex+1];
             string resultHtmlViewFile = args[curArgIndex+2];
             string diffgramFile = args[curArgIndex + 3];
-            string ignoreFile = includeIngnore ? args[curArgIndex + 4] : null;
+
+            var msg = String.Format("Comparing {0} to {1}", sourceXmlFile, changedXmlFile);
+            log.Info(msg);
+            Console.WriteLine(msg);
+
+            string ignoreFile = null;
+            if (includeIngnore && ((curArgIndex + 4) < args.Length))
+            {
+                ignoreFile = args[curArgIndex + 4];
+
+                msg = String.Format("Comparing using ignore file {0}", ignoreFile);
+                log.Info(msg);
+                Console.WriteLine(msg);
+            }
+            else
+            {
+                msg = "Not using ignore file";
+                log.Info(msg);
+                Console.WriteLine(msg);
+            }
+           
 
             MemoryStream diffgram = new MemoryStream();
             XmlTextWriter diffgramWriter = new XmlTextWriter( new StreamWriter( diffgram ) );
 
-            var msg = "Comparing " + sourceXmlFile + " to " + changedXmlFile + " using ignore config " + ignoreFile;
-            log.Info(msg);
-            Console.WriteLine(msg);
+         
 
             XmlDiff xmlDiff = new XmlDiff( options );
             bool bIdentical = true;

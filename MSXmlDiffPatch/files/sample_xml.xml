@@ -1,0 +1,54 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <env:Body>
+      <fiel:FieldManagementReadAll_Output xmlns:fiel="urn:crmondemand/ws/odesabs/fieldmanagement/">
+         <data:ListOfFieldSet xmlns:data="urn:/crmondemand/xml/fieldmanagement/data">
+            <data:FieldSet>
+               <data:ObjectName>User</data:ObjectName>
+               <data:ListOfFields>
+                  <data:Field>
+                     <data:Name>Primary Group Name</data:Name>
+                     <data:DisplayName/>
+                     <data:FieldType>Text (Short)</data:FieldType>
+                     <data:IntegrationTag>PrimaryGroup</data:IntegrationTag>
+                     <data:GenericIntegrationTag>PrimaryGroup</data:GenericIntegrationTag>
+                     <data:Required>false</data:Required>
+                     <data:ReadOnly>true</data:ReadOnly>
+                     <data:DefaultValue/>
+                     <data:ListOfFieldTranslations>
+                        <data:FieldTranslation>
+                           <data:LanguageCode>ENG</data:LanguageCode>
+                           <data:DisplayName>Team</data:DisplayName>
+                        </data:FieldTranslation>
+                     </data:ListOfFieldTranslations>
+                  </data:Field>
+                  <data:Field>
+                     <data:Name>Availability Status</data:Name>
+                     <data:DisplayName>Status</data:DisplayName>
+                     <data:FieldType>Picklist (Read-only)</data:FieldType>
+                     <data:IntegrationTag>Status</data:IntegrationTag>
+                     <data:GenericIntegrationTag>Status</data:GenericIntegrationTag>
+                     <data:Required>true</data:Required>
+                     <data:ReadOnly>false</data:ReadOnly>
+                     <data:DefaultValue/>
+                     <data:FieldValidation/>
+                     <data:PostDefault>false</data:PostDefault>
+                     <data:ValidationErrorMsg/>
+                     <data:ListOfFieldTranslations>
+                        <data:FieldTranslation>
+                           <data:LanguageCode>ENG</data:LanguageCode>
+                           <data:DisplayName>Status</data:DisplayName>
+                           <data:ValidationErrorMsg/>
+                        </data:FieldTranslation>
+                     </data:ListOfFieldTranslations>
+                  </data:Field>
+               </data:ListOfFields>
+            </data:FieldSet>
+         </data:ListOfFieldSet>
+      </fiel:FieldManagementReadAll_Output>
+   </env:Body>   
+ </env:Envelope>
+   
+
+
+

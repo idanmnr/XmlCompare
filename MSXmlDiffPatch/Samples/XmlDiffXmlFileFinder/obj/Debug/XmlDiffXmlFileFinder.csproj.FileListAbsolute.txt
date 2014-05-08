@@ -6,3 +6,11 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Debug\XmlDiffXmlFileFinde
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Debug\XmlDiffXmlFileFinder.pdb
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\log4net.dll
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\XmlDiffXmlFileFinder.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\XmlDiffXmlFileFinder.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\XmlDiffXmlFileFinder.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\log4net.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Debug\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Debug\XmlDiffXmlFileFinder.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Debug\XmlDiffXmlFileFinder.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Debug\XmlDiffXmlFileFinder.pdb

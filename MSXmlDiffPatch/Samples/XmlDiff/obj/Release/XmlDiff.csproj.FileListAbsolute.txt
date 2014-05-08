@@ -3,3 +3,8 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Release\XmlDiff.exe
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\bin\Release\XmlDiffPatch.dll
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\obj\Release\XmlDiff.csprojResolveAssemblyReference.cache
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiff\obj\Release\XmlDiff.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiff\bin\Release\XmlDiff.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiff\bin\Release\XmlDiff.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiff\bin\Release\XmlDiffPatch.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiff\obj\Release\XmlDiff.csprojResolveAssemblyReference.cache
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiff\obj\Release\XmlDiff.exe

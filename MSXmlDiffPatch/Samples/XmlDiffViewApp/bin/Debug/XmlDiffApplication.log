@@ -1,0 +1,22 @@
+2014-05-07 21:57:32,338 [10] INFO  XmlDiffView                Comparing C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml to C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml using ignore config C:\Dev\MSXmlDiffPatch\files\ea_ignore.xml
+2014-05-07 21:57:34,689 [10] INFO  XmlDiffView                Files compared different.
+2014-05-07 21:57:34,689 [10] INFO  XmlDiffView                Generating C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm view file
+2014-05-07 21:57:35,909 [10] INFO  XmlDiffView                C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm saved successfully.
+2014-05-07 21:57:35,909 [10] INFO  XmlDiffView                saving diffgram file
+2014-05-07 21:57:35,910 [10] INFO  XmlDiffView                diffgram file saved to C:\Dev\MSXmlDiffPatch\files\ea_diffgram.xml
+2014-05-07 22:14:43,530 [10] INFO  XmlDiffView                Comparing C:\Dev\MSXmlDiffPatch\files\R12 Staging Field Service.xml to C:\Dev\MSXmlDiffPatch\files\R12 Prod Field Service.xml
+2014-05-07 22:14:55,492 [10] INFO  XmlDiffView                Not using ignore file
+2014-05-07 22:15:02,342 [10] INFO  XmlDiffView                Files compared different.
+2014-05-07 22:15:02,342 [10] INFO  XmlDiffView                Generating C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm view file
+2014-05-07 22:15:03,469 [10] INFO  XmlDiffView                C:\Dev\MSXmlDiffPatch\files\ea_diff_result_display.htm saved successfully.
+2014-05-07 22:15:03,469 [10] INFO  XmlDiffView                saving diffgram file
+2014-05-07 22:15:03,470 [10] INFO  XmlDiffView                diffgram file saved to C:\Dev\MSXmlDiffPatch\files\ea_diffgram.xml
+2014-05-08 22:35:20,536 [9] INFO  XmlDiffView                Comparing C:\Dev\git\XmlCompare\release_candidate\test\animals.xml to C:\Dev\git\XmlCompare\release_candidate\test\animals_change.xml
+2014-05-08 22:35:45,044 [9] INFO  XmlDiffView                Not using ignore file
+2014-05-08 22:36:38,713 [8] INFO  XmlDiffView                Comparing C:\Dev\git\XmlCompare\release_candidate\test\animals.xml to C:\Dev\git\XmlCompare\release_candidate\test\animals_change.xml
+2014-05-08 22:36:55,845 [8] INFO  XmlDiffView                Comparing using ignore file C:\Dev\git\XmlCompare\release_candidate\test\animals_ignore.xml
+2014-05-08 22:39:30,531 [8] INFO  XmlDiffView                Files compared different.
+2014-05-08 22:39:30,532 [8] INFO  XmlDiffView                Generating C:\Dev\git\XmlCompare\release_candidate\test\animals_changes_view.htm view file
+2014-05-08 22:39:30,595 [8] INFO  XmlDiffView                C:\Dev\git\XmlCompare\release_candidate\test\animals_changes_view.htm saved successfully.
+2014-05-08 22:39:30,595 [8] INFO  XmlDiffView                saving diffgram file
+2014-05-08 22:39:30,598 [8] INFO  XmlDiffView                diffgram file saved to C:\Dev\git\XmlCompare\release_candidate\test\animals_diffgram.xml

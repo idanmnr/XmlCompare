@@ -8,3 +8,12 @@ C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFin
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.exe
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.pdb
 C:\Dev\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.XmlSerializers.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\XmlDiffXmlFileFinder.exe.config
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\XmlDiffXmlFileFinder.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\XmlDiffXmlFileFinder.XmlSerializers.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\XmlDiffXmlFileFinder.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\log4net.dll
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\bin\Release\log4net.xml
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.exe
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.pdb
+C:\Dev\git\XmlCompare\MSXmlDiffPatch\Samples\XmlDiffXmlFileFinder\obj\Release\XmlDiffXmlFileFinder.XmlSerializers.dll
